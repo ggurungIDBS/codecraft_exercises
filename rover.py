@@ -6,13 +6,16 @@ class Rover:
         self.directions = ["North", "East", "South", "West"]
 
     def turn_right(self):
-        current_index = self.directions.index(self.direction)
+        current_index = self.get_current_index()
         print(current_index)
         self.direction = self.directions[(
             current_index + 1) % len(self.directions)]
 
+    def get_current_index(self):
+        return self.directions.index(self.direction)
+
     def turn_left(self):
-        current_index = self.directions.index(self.direction)
+        current_index = self.get_current_index()
         print(current_index)
         self.direction = self.directions[(
             current_index - 1) % len(self.directions)]
