@@ -54,3 +54,11 @@ def test_turn_left_from_north():
     rover = Rover(0, 0, 'North')
     rover.turn_left()
     assert rover.direction == 'West'
+
+
+def test_move_forward():
+    rover = Rover(0, 0, 'North')
+    rover.move_forward()
+    assert rover.x == 0
+    assert rover.y == 1
+    assert rover.direction == 'North'

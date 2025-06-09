@@ -16,3 +16,7 @@ class Rover:
         print(current_index)
         self.direction = self.directions[(
             current_index - 1) % len(self.directions)]
+
+    def move_forward(self):
+        if self.direction == 'North':
+            self.y += 1
