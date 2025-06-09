@@ -39,3 +39,14 @@ class Rover:
             self.y += 1
         elif self.direction == 'West':
             self.x += 1
+
+    def process_instructions(self, instructions: str):
+        for instruction in instructions:
+            if instruction == 'R':
+                self.turn_right()
+            elif instruction == 'L':
+                self.turn_left()
+            elif instruction == 'F':
+                self.move_forward()
+            elif instruction == 'B':
+                self.move_backward()

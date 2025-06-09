@@ -118,3 +118,11 @@ def test_move_backward_west():
     assert rover.x == 6
     assert rover.y == 5
     assert rover.direction == 'West'
+
+
+def test_sequence_instructions():
+    rover = Rover(0, 0, "North")
+    rover.process_instructions("FRR")
+    assert rover.x == 0
+    assert rover.y == 1
+    assert rover.direction == 'South'
