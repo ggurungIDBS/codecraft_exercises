@@ -18,3 +18,15 @@ def test_turn_right_from_east():
     rover = Rover(0, 0, 'East')
     rover.turn_right()
     assert rover.direction == 'South'
+
+
+def test_turn_right_from_south():
+    rover = Rover(0, 0, 'South')
+    rover.turn_right()
+    assert rover.direction == 'West'
+
+
+def test_turn_right_from_west():
+    rover = Rover(0, 0, 'West')
+    rover.turn_right()
+    assert rover.direction == 'North'
