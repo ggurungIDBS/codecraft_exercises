@@ -6,3 +6,15 @@ def test_rover_initialization():
     assert rover.x == 4
     assert rover.y == 7
     assert rover.direction == 'North'
+
+
+def test_turn_right_from_north():
+    rover = Rover(0, 0, 'North')
+    rover.turn_right()
+    assert rover.direction == 'East'
+
+
+def test_turn_right_from_east():
+    rover = Rover(0, 0, 'East')
+    rover.turn_right()
+    assert rover.direction == 'South'
