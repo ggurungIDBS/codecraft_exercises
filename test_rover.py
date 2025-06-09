@@ -30,3 +30,27 @@ def test_turn_right_from_west():
     rover = Rover(0, 0, 'West')
     rover.turn_right()
     assert rover.direction == 'North'
+
+
+def test_turn_left_from_west():
+    rover = Rover(0, 0, 'West')
+    rover.turn_left()
+    assert rover.direction == 'South'
+
+
+def test_turn_left_from_south():
+    rover = Rover(0, 0, 'South')
+    rover.turn_left()
+    assert rover.direction == 'East'
+
+
+def test_turn_left_from_east():
+    rover = Rover(0, 0, 'East')
+    rover.turn_left()
+    assert rover.direction == 'North'
+
+
+def test_turn_left_from_north():
+    rover = Rover(0, 0, 'North')
+    rover.turn_left()
+    assert rover.direction == 'West'
