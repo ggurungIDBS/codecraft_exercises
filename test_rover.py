@@ -86,3 +86,35 @@ def test_movee_forward_west():
     assert rover.x == 6
     assert rover.y == 5
     assert rover.direction == 'West'
+
+
+def test_move_backward_north():
+    rover = Rover(5, 5, "North")
+    rover.move_backward()
+    assert rover.x == 5
+    assert rover.y == 4
+    assert rover.direction == 'North'
+
+
+def test_move_backward_east():
+    rover = Rover(7, 9, "East")
+    rover.move_backward()
+    assert rover.x == 6
+    assert rover.y == 9
+    assert rover.direction == 'East'
+
+
+def test_move_backward_south():
+    rover = Rover(4, 3, "South")
+    rover.move_backward()
+    assert rover.x == 4
+    assert rover.y == 4
+    assert rover.direction == 'South'
+
+
+def test_move_backward_west():
+    rover = Rover(5, 5, "West")
+    rover.move_backward()
+    assert rover.x == 6
+    assert rover.y == 5
+    assert rover.direction == 'West'
