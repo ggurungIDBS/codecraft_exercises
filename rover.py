@@ -23,3 +23,9 @@ class Rover:
     def move_forward(self):
         if self.direction == 'North':
             self.y += 1
+        elif self.direction == 'East':
+            self.x += 1
+        elif self.direction == 'South':
+            self.y -= 1
+        elif self.direction == 'West':
+            self.x -= 1
