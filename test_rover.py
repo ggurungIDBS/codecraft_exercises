@@ -126,3 +126,11 @@ def test_sequence_instructions():
     assert rover.x == 0
     assert rover.y == 1
     assert rover.direction == 'South'
+
+
+def test_invalid_sequence_instructions():
+    rover = Rover(0, 0, "North")
+    rover.process_instructions("FYRAR")
+    assert rover.x == 0
+    assert rover.y == 1
+    assert rover.direction == 'South'
